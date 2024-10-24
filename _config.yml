@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: freedom club
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: shenlvyu
+language: zh-CN
 timezone: ''
 
 # URL
@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -104,3 +104,4 @@ deploy:
   type: git
   repo: git@github.com:sly17zql/sly17zql.github.io.git
   branch: main
+
