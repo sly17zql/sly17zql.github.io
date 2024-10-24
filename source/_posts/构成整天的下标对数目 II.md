@@ -2,9 +2,12 @@
 title: 构成整天的下标对数目 II
 abbrlink: 26602
 date: 2024-10-23 16:13:33
-tags: 算法
+tags: 
+  - 算法
 description: 每天一道算法题，让你变得更好
-categories: 学习 代码
+categories: 
+  - 学习 
+  - 代码
 ---
 
 #### 题目

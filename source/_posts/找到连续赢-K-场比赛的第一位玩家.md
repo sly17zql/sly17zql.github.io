@@ -2,9 +2,12 @@
 title: 找到连续赢 K 场比赛的第一位玩家
 abbrlink: 26085
 date: 2024-10-24 15:00:35
-tags: 算法
+tags: 
+  - 算法
 description: 每天一道算法题，让你变得更好
-categories: 学习 代码
+categories: 
+  - 学习 
+  - 代码
 ---
 
 #### 找到连续赢 K 场比赛的第一位玩家
