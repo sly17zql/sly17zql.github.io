@@ -29,19 +29,18 @@ class Solution:
     def maxTotalReward(self, rewardValues: List[int]) -> int:
         length = len(rewardValues)
         rewardValues.sort()
-        from sortedcontainers import SortedSet
-        ret = SortedSet()
+        ret = {}
 
         for i in range(length):
             cur_num = rewardValues[i]
-            ret.add(cur_num)
+            ret[cur_num] = True
             num = cur_num - 1
             while num > 0:
                 if num in ret:
-                    ret.add(cur_num + num)
+                    ret[cur_num + num] = True
                 num -= 1
 
-        return ret[-1]
+        return max(ret.keys())
 ```
 
 #### 思路
@@ -57,3 +56,9 @@ class Solution:
 4、重复上述动作，获取有序集合最大值就是最终答案。
 
 #### 复杂度
+
+N 是 rewardValues 的 长度，M是 rewardValues 的最大值
+
+时间复杂度：O(NM)
+
+空间复杂度：O(M)
