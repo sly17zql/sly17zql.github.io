@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="一个热爱生活的程序员">
+    <meta name="description" content="执行操作可获得的最大总奖励 I给你一个整数数组 rewardValues，长度为 n，代表奖励的值。 最初，你的总奖励 x 为 0，所有下标都是 未标记 的。你可以执行以下操作 任意次 ：  从区间 [0, n - 1] 中选择一个 未标记 的下标 i。 如果 rewardValues[i] 大于 你当前的总奖励 x，则将 rewardValues[i] 加到 x 上（即 x &#x3D; x + rewa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="执行操作可获得的最大总奖励 I">
 <meta property="og:url" content="https://sly17zql.github.io/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/index.html">
 <meta property="og:site_name" content="freedom club">
-<meta property="og:description" content="一个热爱生活的程序员">
+<meta property="og:description" content="执行操作可获得的最大总奖励 I给你一个整数数组 rewardValues，长度为 n，代表奖励的值。 最初，你的总奖励 x 为 0，所有下标都是 未标记 的。你可以执行以下操作 任意次 ：  从区间 [0, n - 1] 中选择一个 未标记 的下标 i。 如果 rewardValues[i] 大于 你当前的总奖励 x，则将 rewardValues[i] 加到 x 上（即 x &#x3D; x + rewa">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-25T01:06:02.000Z">
 <meta property="article:modified_time" content="2024-10-25T01:06:02.000Z">
@@ -114,6 +114,10 @@
     </div>
     
     
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I"><span class="toc-number">1.</span> <span class="toc-text">执行操作可获得的最大总奖励 I</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-number">2.</span> <span class="toc-text">解答</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">4.</span> <span class="toc-text">复杂度</span></a></li></ol>
+      </div>
+    
   </span>
 </div>
 
@@ -156,7 +160,23 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    
+    <h4 id="执行操作可获得的最大总奖励-I"><a href="#执行操作可获得的最大总奖励-I" class="headerlink" title="执行操作可获得的最大总奖励 I"></a>执行操作可获得的最大总奖励 I</h4><p>给你一个整数数组 <code>rewardValues</code>，长度为 <code>n</code>，代表奖励的值。</p>
+<p>最初，你的总奖励 <code>x</code> 为 0，所有下标都是 <strong>未标记</strong> 的。你可以执行以下操作 <strong>任意次</strong> ：</p>
+<ul>
+<li>从区间 <code>[0, n - 1]</code> 中选择一个 <strong>未标记</strong> 的下标 <code>i</code>。</li>
+<li>如果 <code>rewardValues[i]</code> <strong>大于</strong> 你当前的总奖励 <code>x</code>，则将 <code>rewardValues[i]</code> 加到 <code>x</code> 上（即 <code>x = x + rewardValues[i]</code>），并 <strong>标记</strong> 下标 <code>i</code>。</li>
+</ul>
+<p>以整数形式返回执行最优操作能够获得的 <strong>最大</strong> 总奖励。</p>
+<h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maxTotalReward</span>(<span class="params">self, rewardValues: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        length = <span class="built_in">len</span>(rewardValues)</span><br><span class="line">        rewardValues.sort()</span><br><span class="line">        <span class="keyword">from</span> sortedcontainers <span class="keyword">import</span> SortedSet</span><br><span class="line">        ret = SortedSet()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">            cur_num = rewardValues[i]</span><br><span class="line">            ret.add(cur_num)</span><br><span class="line">            num = cur_num - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> num &gt; <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">if</span> num <span class="keyword">in</span> ret:</span><br><span class="line">                    ret.add(cur_num + num)</span><br><span class="line">                num -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ret[-<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>需要执行操作获得最大的奖励，假设当前想要获得X的奖励，那么我之前最多只能获得X-1的奖励，那么这是一个顺序有关的算法。</p>
+<p>1、首先我们对<strong>rewardValues</strong>进行排序。</p>
+<p>2、构造一个有序的集合，开始遍历我们可以获得的奖励列表<strong>rewardValues</strong>。</p>
+<p>3、每个需要获取的奖励就是 rewardValues[index]，小于当前值的奖励都是可以获取到的，那么我们需要取更新整个<strong>ret</strong>。</p>
+<p>4、重复上述动作，获取有序集合最大值就是最终答案。</p>
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>时间复杂度: O(N^2)  </p>
+<p>空间复杂度: O(N)</p>
+
   </div>
 </article>
 
@@ -184,6 +204,10 @@
 
     
     
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I"><span class="toc-number">1.</span> <span class="toc-text">执行操作可获得的最大总奖励 I</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-number">2.</span> <span class="toc-text">解答</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">4.</span> <span class="toc-text">复杂度</span></a></li></ol>
+      </div>
+    
 
     <div id="share-footer" style="display: none">
       <ul>
@@ -204,6 +228,8 @@
 
     <div id="actions-footer">
         <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
         
         <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
         <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
