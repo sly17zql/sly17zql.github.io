@@ -4,7 +4,7 @@ abbrlink: 26085
 date: 2024-10-24 15:00:35
 updated: 2024-10-24 15:00:35
 tags: 
-  - 算法
+  - 每日算法题
 description: 每天一道算法题，让你变得更好
 categories: 
   - 学习 
