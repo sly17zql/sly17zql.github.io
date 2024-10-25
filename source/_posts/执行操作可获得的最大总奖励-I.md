@@ -1,14 +1,14 @@
 ---
 title: 执行操作可获得的最大总奖励 I
-tags:
-  - 算法
-ategories:
-  - 学习
-  - 代码
 abbrlink: 64865
 date: 2024-10-25 09:06:02
 updated: 2024-10-25 09:06:02
-description:
+tags: 
+  - 算法
+description: 每天一道算法题，让你变得更好
+categories: 
+  - 学习 
+  - 代码
 ---
 
 #### 执行操作可获得的最大总奖励 I
