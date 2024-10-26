@@ -19,28 +19,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sly17zql.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="每天一道算法题，让你变得更好">
+    <meta name="description" content="这是一片纪念我开始写blog的随笔，可能很短可能很长，我甚至还不知道这篇随笔的内容。但是我因为开始终于将这件事付诸实践时，我觉得还是很需要有一个纪念性的东西。     说起写blog这件事，我已经不记得我是什么时候开始有这个念头的了，但是我知道我现在真的很想去写一些文字，记录一下自己，也想和别人分享一些东西。     其实，我从小学开始，一直为写作而烦恼，读完初中读完高中读完">
 <meta property="og:type" content="article">
-<meta property="og:title" content="执行操作可获得的最大总奖励 I">
-<meta property="og:url" content="https://sly17zql.github.io/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/index.html">
+<meta property="og:title" content="blog开篇随笔">
+<meta property="og:url" content="https://sly17zql.github.io/2024/10/26/blog%E5%BC%80%E7%AF%87%E9%9A%8F%E7%AC%94/index.html">
 <meta property="og:site_name" content="freedom club">
-<meta property="og:description" content="每天一道算法题，让你变得更好">
+<meta property="og:description" content="这是一片纪念我开始写blog的随笔，可能很短可能很长，我甚至还不知道这篇随笔的内容。但是我因为开始终于将这件事付诸实践时，我觉得还是很需要有一个纪念性的东西。     说起写blog这件事，我已经不记得我是什么时候开始有这个念头的了，但是我知道我现在真的很想去写一些文字，记录一下自己，也想和别人分享一些东西。     其实，我从小学开始，一直为写作而烦恼，读完初中读完高中读完">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-25T01:06:02.000Z">
-<meta property="article:modified_time" content="2024-10-25T01:06:02.000Z">
+<meta property="og:image" content="https://sly17zql.github.io/2024/10/26/blog%E5%BC%80%E7%AF%87%E9%9A%8F%E7%AC%94/background.png">
+<meta property="article:published_time" content="2024-10-26T05:56:07.000Z">
+<meta property="article:modified_time" content="2024-10-26T05:56:07.000Z">
 <meta property="article:author" content="shenlvyu">
-<meta property="article:tag" content="DP">
+<meta property="article:tag" content="心情">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sly17zql.github.io/2024/10/26/blog%E5%BC%80%E7%AF%87%E9%9A%8F%E7%AC%94/background.png">
 
 
-<link rel="canonical" href="https://sly17zql.github.io/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/">
+<link rel="canonical" href="https://sly17zql.github.io/2024/10/26/blog%E5%BC%80%E7%AF%87%E9%9A%8F%E7%AC%94/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/","path":"2024/10/25/执行操作可获得的最大总奖励-I/","title":"执行操作可获得的最大总奖励 I"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/10/26/blog%E5%BC%80%E7%AF%87%E9%9A%8F%E7%AC%94/","path":"2024/10/26/blog开篇随笔/","title":"blog开篇随笔"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>执行操作可获得的最大总奖励 I | freedom club</title>
+<title>blog开篇随笔 | freedom club</title>
   
 
 
@@ -99,7 +101,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -112,7 +114,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I"><span class="nav-number">1.</span> <span class="nav-text">执行操作可获得的最大总奖励 I</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,7 +163,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/">
+    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/10/26/blog%E5%BC%80%E7%AF%87%E9%9A%8F%E7%AC%94/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -175,12 +176,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="执行操作可获得的最大总奖励 I | freedom club">
-      <meta itemprop="description" content="每天一道算法题，让你变得更好">
+      <meta itemprop="name" content="blog开篇随笔 | freedom club">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          执行操作可获得的最大总奖励 I
+          blog开篇随笔
         </h1>
 
         <div class="post-meta-container">
@@ -191,7 +192,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-10-25 09:06:02" itemprop="dateCreated datePublished" datetime="2024-10-25T09:06:02+08:00">2024-10-25</time>
+      <time title="创建时间：2024-10-26 13:56:07" itemprop="dateCreated datePublished" datetime="2024-10-26T13:56:07+08:00">2024-10-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -199,41 +200,28 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0/%E4%BB%A3%E7%A0%81/" itemprop="url" rel="index"><span itemprop="name">代码</span></a>
+          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
         </span>
     </span>
 
   
 </div>
 
-            <div class="post-description">每天一道算法题，让你变得更好</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h4 id="执行操作可获得的最大总奖励-I"><a href="#执行操作可获得的最大总奖励-I" class="headerlink" title="执行操作可获得的最大总奖励 I"></a>执行操作可获得的最大总奖励 I</h4><p>给你一个整数数组 <code>rewardValues</code>，长度为 <code>n</code>，代表奖励的值。</p>
-<p>最初，你的总奖励 <code>x</code> 为 0，所有下标都是 <strong>未标记</strong> 的。你可以执行以下操作 <strong>任意次</strong> ：</p>
-<ul>
-<li>从区间 <code>[0, n - 1]</code> 中选择一个 <strong>未标记</strong> 的下标 <code>i</code>。</li>
-<li>如果 <code>rewardValues[i]</code> <strong>大于</strong> 你当前的总奖励 <code>x</code>，则将 <code>rewardValues[i]</code> 加到 <code>x</code> 上（即 <code>x = x + rewardValues[i]</code>），并 <strong>标记</strong> 下标 <code>i</code>。</li>
-</ul>
-<p>以整数形式返回执行最优操作能够获得的 <strong>最大</strong> 总奖励。</p>
-<h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maxTotalReward</span>(<span class="params">self, rewardValues: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        length = <span class="built_in">len</span>(rewardValues)</span><br><span class="line">        rewardValues.sort()</span><br><span class="line">        ret = &#123;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">            cur_num = rewardValues[i]</span><br><span class="line">            ret[cur_num] = <span class="literal">True</span></span><br><span class="line">            num = cur_num - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> num &gt; <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">if</span> num <span class="keyword">in</span> ret:</span><br><span class="line">                    ret[cur_num + num] = <span class="literal">True</span></span><br><span class="line">                num -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(ret.keys())</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><img src="/2024/10/26/blog%E5%BC%80%E7%AF%87%E9%9A%8F%E7%AC%94/background.png" class="">
 
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>需要执行操作获得最大的奖励，假设当前想要获得X的奖励，那么我之前最多只能获得X-1的奖励，那么这是一个顺序有关的算法。</p>
-<p>1、首先我们对<strong>rewardValues</strong>进行排序。</p>
-<p>2、构造一个有序的集合，开始遍历我们可以获得的奖励列表<strong>rewardValues</strong>。</p>
-<p>3、每个需要获取的奖励就是 rewardValues[index]，小于当前值的奖励都是可以获取到的，那么我们需要取更新整个<strong>ret</strong>。</p>
-<p>4、重复上述动作，获取有序集合最大值就是最终答案。</p>
-<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>N 是 rewardValues 的 长度，M是 rewardValues 的最大值</p>
-<p>时间复杂度：O(NM)</p>
-<p>空间复杂度：O(M)</p>
+<p>    </p>
+<p>    这是一片纪念我开始写blog的随笔，可能很短可能很长，我甚至还不知道这篇随笔的内容。但是我因为开始终于将这件事付诸实践时，我觉得还是很需要有一个纪念性的东西。</p>
+<p>    说起写blog这件事，我已经不记得我是什么时候开始有这个念头的了，但是我知道我现在真的很想去写一些文字，记录一下自己，也想和别人分享一些东西。</p>
+<p>    其实，我从小学开始，一直为写作而烦恼，读完初中读完高中读完大学，甚至工作几年后，我仍然不知道怎么写作，不知道为什么要写作，也不知道要写什么。现在我仿佛知晓了一些其中的意义，与其说是写作，我更喜欢用写话这个词。我不是想要创作什么高深的东西，或者教会任何人什么事，更重要的是把自己想要说的话写下来，表达自己，记录自己，对一个人存在于这个世界上，是一个多么有价值的事。</p>
+<p>    当我成为一名程序员的时候，我感觉这是一件幸福的事情。这个职业让我收益良多，不仅是工作，还有生命的意义。在程序的海洋中，我感觉到了快乐，这是一个自由的世界，我很喜欢这句话：<strong>Code never lies</strong>  。Code 永远不会欺骗你，他会让我感到安心，他像朋友，又像老师，也是另一个我自己。在这个过程中，我开始审视自己，了解自己，也更加了解这个世界。我结实到很多朋友，看到了更广阔的世界，这所有的经历让我更加尊重每一个个体，尊重这个世界。这一切也是让我想要去写blog，记录自己的一个最重要的推动力，可以说如果我没有成为程序员，可能现在也不会去做这件事。</p>
+<p>    我在想，我的blog中会包含什么内容，可能有一些大概的构想，作为程序员，那肯定会涉及的<em>code</em>方面的内容，不光包括我刷的一些算法题的记录，也会包括我涉及到使用的一些技术的简单分享，更想要去做自己的代码分享；其次，作为一个向往自由，喜欢感悟生活的人，也不能少了一些关于<em>生活</em>的记录；其他，我还想写一些个人推荐的电影、书籍的内容，以及一些可能作为一个生活几十年人的对一些生活、人生感悟的内容。这些便是我现在能想到的要进行记录的一些方向。当然，随着时间的变化，一定会发生变化。</p>
+<p>    最后其实我特别想感谢一下我的妻子，她其实很有思想，也很理解我。我觉得我人生走的这条路她对我有很大的启发和帮助，希望因为这篇纪念的随笔，自己不要荒废，把这件事情坚持做下去。</p>
 
     </div>
 
@@ -243,21 +231,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/DP/" rel="tag"># DP</a>
+              <a href="/tags/%E5%BF%83%E6%83%85/" rel="tag"># 心情</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/24/%E6%89%BE%E5%88%B0%E8%BF%9E%E7%BB%AD%E8%B5%A2-K-%E5%9C%BA%E6%AF%94%E8%B5%9B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BD%8D%E7%8E%A9%E5%AE%B6/" rel="prev" title="找到连续赢 K 场比赛的第一位玩家">
-                  <i class="fa fa-angle-left"></i> 找到连续赢 K 场比赛的第一位玩家
+                <a href="/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/" rel="prev" title="执行操作可获得的最大总奖励 II">
+                  <i class="fa fa-angle-left"></i> 执行操作可获得的最大总奖励 II
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/" rel="next" title="执行操作可获得的最大总奖励 II">
-                  执行操作可获得的最大总奖励 II <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
