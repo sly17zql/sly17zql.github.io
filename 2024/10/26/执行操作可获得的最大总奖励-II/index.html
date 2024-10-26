@@ -19,28 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sly17zql.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="每天一道算法题，让你变得更好">
+    <meta name="description" content="执行操作可获得的最大总奖励 II给你一个整数数组 rewardValues，长度为 n，代表奖励的值。 最初，你的总奖励 x 为 0，所有下标都是 未标记 的。你可以执行以下操作 任意次 ：  从区间 [0, n - 1] 中选择一个 未标记 的下标 i。 如果 rewardValues[i] 大于 你当前的总奖励 x，则将 rewardValues[i] 加到 x 上（即 x &#x3D; x + rew">
 <meta property="og:type" content="article">
-<meta property="og:title" content="构成整天的下标对数目 II">
-<meta property="og:url" content="https://sly17zql.github.io/2024/10/23/%E6%9E%84%E6%88%90%E6%95%B4%E5%A4%A9%E7%9A%84%E4%B8%8B%E6%A0%87%E5%AF%B9%E6%95%B0%E7%9B%AE%20II/index.html">
+<meta property="og:title" content="执行操作可获得的最大总奖励 II">
+<meta property="og:url" content="https://sly17zql.github.io/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/index.html">
 <meta property="og:site_name" content="freedom club">
-<meta property="og:description" content="每天一道算法题，让你变得更好">
+<meta property="og:description" content="执行操作可获得的最大总奖励 II给你一个整数数组 rewardValues，长度为 n，代表奖励的值。 最初，你的总奖励 x 为 0，所有下标都是 未标记 的。你可以执行以下操作 任意次 ：  从区间 [0, n - 1] 中选择一个 未标记 的下标 i。 如果 rewardValues[i] 大于 你当前的总奖励 x，则将 rewardValues[i] 加到 x 上（即 x &#x3D; x + rew">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-23T08:13:33.000Z">
-<meta property="article:modified_time" content="2024-10-23T08:13:33.000Z">
+<meta property="article:published_time" content="2024-10-26T05:04:32.000Z">
+<meta property="article:modified_time" content="2024-10-26T05:04:32.000Z">
 <meta property="article:author" content="shenlvyu">
-<meta property="article:tag" content="每日算法题">
+<meta property="article:tag" content="DP">
+<meta property="article:tag" content="位运算">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sly17zql.github.io/2024/10/23/%E6%9E%84%E6%88%90%E6%95%B4%E5%A4%A9%E7%9A%84%E4%B8%8B%E6%A0%87%E5%AF%B9%E6%95%B0%E7%9B%AE%20II/">
+<link rel="canonical" href="https://sly17zql.github.io/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/10/23/%E6%9E%84%E6%88%90%E6%95%B4%E5%A4%A9%E7%9A%84%E4%B8%8B%E6%A0%87%E5%AF%B9%E6%95%B0%E7%9B%AE%20II/","path":"2024/10/23/构成整天的下标对数目 II/","title":"构成整天的下标对数目 II"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/","path":"2024/10/26/执行操作可获得的最大总奖励-II/","title":"执行操作可获得的最大总奖励 II"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>构成整天的下标对数目 II | freedom club</title>
+<title>执行操作可获得的最大总奖励 II | freedom club</title>
   
 
 
@@ -112,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">1.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II"><span class="nav-number">1.</span> <span class="nav-text">执行操作可获得的最大总奖励 II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,7 +163,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/10/23/%E6%9E%84%E6%88%90%E6%95%B4%E5%A4%A9%E7%9A%84%E4%B8%8B%E6%A0%87%E5%AF%B9%E6%95%B0%E7%9B%AE%20II/">
+    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -175,12 +176,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="构成整天的下标对数目 II | freedom club">
-      <meta itemprop="description" content="每天一道算法题，让你变得更好">
+      <meta itemprop="name" content="执行操作可获得的最大总奖励 II | freedom club">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          构成整天的下标对数目 II
+          执行操作可获得的最大总奖励 II
         </h1>
 
         <div class="post-meta-container">
@@ -191,7 +192,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-10-23 16:13:33" itemprop="dateCreated datePublished" datetime="2024-10-23T16:13:33+08:00">2024-10-23</time>
+      <time title="创建时间：2024-10-26 13:04:32" itemprop="dateCreated datePublished" datetime="2024-10-26T13:04:32+08:00">2024-10-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -210,21 +211,32 @@
   
 </div>
 
-            <div class="post-description">每天一道算法题，让你变得更好</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>给你一个整数数组 hours，表示以 小时 为单位的时间，返回一个整数，表示满足 i &lt; j 且 hours[i] + hours[j] 构成 整天 的下标对 i, j 的数目。</p>
-<p>整天 定义为时间持续时间是 24 小时的 整数倍 。</p>
-<p>例如，1 天是 24 小时，2 天是 48 小时，3 天是 72 小时，以此类推。</p>
-<h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">countCompleteDayPairs</span>(<span class="params">self, hours: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        hours_map = defaultdict(<span class="built_in">int</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(hours)):</span><br><span class="line">            hours[i] = hours[i] % <span class="number">24</span></span><br><span class="line">            hours_map[hours[i]] += <span class="number">1</span></span><br><span class="line">        ans1 = <span class="number">0</span></span><br><span class="line">        ans2 = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> k, v <span class="keyword">in</span> hours_map.items():</span><br><span class="line">            <span class="keyword">if</span> k == <span class="number">0</span> <span class="keyword">or</span> k == <span class="number">12</span>:</span><br><span class="line">                ans1 += v * (v - <span class="number">1</span>) // <span class="number">2</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> <span class="number">24</span> - k <span class="keyword">in</span> hours_map:</span><br><span class="line">                ans2 += hours_map[<span class="number">24</span> - k] * v</span><br><span class="line">        <span class="keyword">return</span> ans1 + ans2 // <span class="number">2</span></span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h4 id="执行操作可获得的最大总奖励-II"><a href="#执行操作可获得的最大总奖励-II" class="headerlink" title="执行操作可获得的最大总奖励 II"></a>执行操作可获得的最大总奖励 II</h4><p>给你一个整数数组 <code>rewardValues</code>，长度为 <code>n</code>，代表奖励的值。</p>
+<p>最初，你的总奖励 <code>x</code> 为 0，所有下标都是 <strong>未标记</strong> 的。你可以执行以下操作 <strong>任意次</strong> ：</p>
+<ul>
+<li>从区间 <code>[0, n - 1]</code> 中选择一个 <strong>未标记</strong> 的下标 <code>i</code>。</li>
+<li>如果 <code>rewardValues[i]</code> <strong>大于</strong> 你当前的总奖励 <code>x</code>，则将 <code>rewardValues[i]</code> 加到 <code>x</code> 上（即 <code>x = x + rewardValues[i]</code>），并 <strong>标记</strong> 下标 <code>i</code>。</li>
+</ul>
+<p>以整数形式返回执行最优操作能够获得的 <strong>最大</strong> 总奖励。</p>
+<h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maxTotalReward</span>(<span class="params">self, rewardValues: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        ret = <span class="number">1</span></span><br><span class="line">        rewardValues.sort()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> rewardValues:</span><br><span class="line">            ret |= (((<span class="number">1</span> &lt;&lt; item) - <span class="number">1</span>) &amp; ret) &lt;&lt; item</span><br><span class="line">        <span class="keyword">return</span> ret.bit_length() - <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>取余以后使用<code>hashmap</code>，对0和12做特殊处理，因为这两个值自身可以作为配对。</p>
-<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>时间复杂度: O(N)</p>
-<p>空间复杂度: O(1)</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>基本思路： 由于上一篇文章的思路可以基本套用，基于之前的思路，由于本体的数据量大小提高到了 5 * 10 ^ 4，导致原本的解体方式会超时时间限制，所以再次前提之上做出优化。</p>
+<p>优化思路：使用位运算代替，之前的遍历数组，基本思想，就是因为每个值是一个bool值，可以实现为True，无法实现为False。</p>
+<p>优化方案具体：</p>
+<ul>
+<li>由于我们从小到大的遍历思想，当我们遍历到大小 N 的数值时，我们需要判断 0-（N-1）是否有满足条件的答案出现，如果有那么便可以作为答案加入到现有答案序列中。</li>
+<li>先将 N 转换为 N 位长度的二进制，减一，表示 1 - （N - 1）位。</li>
+<li>然后与 当前结果 ret 取 按位与，如果当前位为 1 表示可以实现。</li>
+<li>最后与当前数值求和，那么整体往左移 N，即可得到一个目标值的 新的 ret。</li>
+</ul>
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>rewardValues 长度为N， 最大值位 M</p>
+<p>时间复杂度：NM&#x2F;32 (这个时间复杂度和空间复杂度的表示暂时存惑)<br>空间复杂度：M&#x2F;32</p>
 
     </div>
 
@@ -234,18 +246,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%AF%8F%E6%97%A5%E7%AE%97%E6%B3%95%E9%A2%98/" rel="tag"># 每日算法题</a>
+              <a href="/tags/DP/" rel="tag"># DP</a>
+              <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag"># 位运算</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/" rel="prev" title="执行操作可获得的最大总奖励 I">
+                  <i class="fa fa-angle-left"></i> 执行操作可获得的最大总奖励 I
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/23/%E8%80%81%E9%A9%AC%E7%9A%841984/" rel="next" title="老马的1984">
-                  老马的1984 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
