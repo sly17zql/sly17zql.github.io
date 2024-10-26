@@ -131,7 +131,7 @@
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -212,29 +212,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="执行操作可获得的最大总奖励-II"><a href="#执行操作可获得的最大总奖励-II" class="headerlink" title="执行操作可获得的最大总奖励 II"></a>执行操作可获得的最大总奖励 II</h4><p>给你一个整数数组 <code>rewardValues</code>，长度为 <code>n</code>，代表奖励的值。</p>
-<p>最初，你的总奖励 <code>x</code> 为 0，所有下标都是 <strong>未标记</strong> 的。你可以执行以下操作 <strong>任意次</strong> ：</p>
-<ul>
-<li>从区间 <code>[0, n - 1]</code> 中选择一个 <strong>未标记</strong> 的下标 <code>i</code>。</li>
-<li>如果 <code>rewardValues[i]</code> <strong>大于</strong> 你当前的总奖励 <code>x</code>，则将 <code>rewardValues[i]</code> 加到 <code>x</code> 上（即 <code>x = x + rewardValues[i]</code>），并 <strong>标记</strong> 下标 <code>i</code>。</li>
-</ul>
-<p>以整数形式返回执行最优操作能够获得的 <strong>最大</strong> 总奖励。</p>
-<h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maxTotalReward</span>(<span class="params">self, rewardValues: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        ret = <span class="number">1</span></span><br><span class="line">        rewardValues.sort()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> rewardValues:</span><br><span class="line">            ret |= (((<span class="number">1</span> &lt;&lt; item) - <span class="number">1</span>) &amp; ret) &lt;&lt; item</span><br><span class="line">        <span class="keyword">return</span> ret.bit_length() - <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><a href="/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/" title="执行操作可获得的最大总奖励 I">执行操作可获得的最大总奖励 I</a>
-
-<p>基本思路： 由于上一篇文章的思路可以基本套用，基于之前的思路，由于本体的数据量大小提高到了 5 * 10 ^ 4，导致原本的解体方式会超时时间限制，所以再次前提之上做出优化。</p>
-<p>优化思路：使用位运算代替，之前的遍历数组，基本思想，就是因为每个值是一个bool值，可以实现为True，无法实现为False。</p>
-<p>优化方案具体：</p>
-<ul>
-<li>由于我们从小到大的遍历思想，当我们遍历到大小 N 的数值时，我们需要判断 0-（N-1）是否有满足条件的答案出现，如果有那么便可以作为答案加入到现有答案序列中。</li>
-<li>先将 N 转换为 N 位长度的二进制，减一，表示 1 - （N - 1）位。</li>
-<li>然后与 当前结果 ret 取 按位与，如果当前位为 1 表示可以实现。</li>
-<li>最后与当前数值求和，那么整体往左移 N，即可得到一个目标值的 新的 ret。</li>
-</ul>
-<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>rewardValues 长度为N， 最大值位 M</p>
-<p>时间复杂度：NM&#x2F;32 (这个时间复杂度和空间复杂度的表示暂时存惑)<br>空间复杂度：M&#x2F;32</p>
-
+          <p>每天一道算法题，让你变得更好</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
