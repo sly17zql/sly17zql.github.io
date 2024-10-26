@@ -1,10 +1,9 @@
 ---
-title: 记在10-26
+title: blog开篇随笔
 date: 2024-10-26 13:56:07
 updated: 2024-10-26 13:56:07
 tags:
   - 心情
-  - NO.1
 categories:
   - 随笔
 ---
