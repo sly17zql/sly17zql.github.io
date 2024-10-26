@@ -1,5 +1,6 @@
 ---
 title: blog开篇随笔
+abbrlink: 2362
 date: 2024-10-26 13:56:07
 updated: 2024-10-26 13:56:07
 tags:
