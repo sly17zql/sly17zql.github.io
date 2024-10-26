@@ -9,6 +9,7 @@ description: 每天一道算法题，让你变得更好
 categories: 
   - 学习 
   - 代码
+  - 算法
 ---
 
 #### 题目
