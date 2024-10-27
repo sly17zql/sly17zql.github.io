@@ -5,7 +5,7 @@ date: 2024-10-25 09:06:02
 updated: 2024-10-25 09:06:02
 tags: 
   - DP
-description: 每天一道算法题，让你变得更好
+description: 每天一道算法题，让生活变得更好
 categories: 
   - 学习 
   - 代码

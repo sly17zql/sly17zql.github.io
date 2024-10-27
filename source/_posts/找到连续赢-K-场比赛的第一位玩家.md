@@ -5,7 +5,7 @@ date: 2024-10-24 15:00:35
 updated: 2024-10-24 15:00:35
 tags: 
   - 数组
-description: 每天一道算法题，让你变得更好
+description: 每天一道算法题，让生活变得更好
 categories: 
   - 学习 
   - 代码

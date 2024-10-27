@@ -5,7 +5,7 @@ date: 2024-10-23 16:13:33
 updated: 2024-10-23 16:13:33
 tags: 
   - HASHMAP
-description: 每天一道算法题，让你变得更好
+description: 每天一道算法题，让生活变得更好
 categories: 
   - 学习 
   - 代码
