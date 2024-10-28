@@ -21,7 +21,7 @@
 
     <meta name="description" content="每天一道算法题，让生活变得更好">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冗余连接 II">
+<meta property="og:title" content="【每日算法题】冗余连接 II">
 <meta property="og:url" content="https://sly17zql.github.io/2024/10/28/%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5-II/index.html">
 <meta property="og:site_name" content="freedom club">
 <meta property="og:description" content="每天一道算法题，让生活变得更好">
@@ -38,10 +38,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/10/28/%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5-II/","path":"2024/10/28/冗余连接-II/","title":"冗余连接 II"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/10/28/%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5-II/","path":"2024/10/28/冗余连接-II/","title":"【每日算法题】冗余连接 II"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>冗余连接 II | freedom club</title>
+<title>【每日算法题】冗余连接 II | freedom club</title>
   
 
 
@@ -179,12 +179,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="冗余连接 II | freedom club">
+      <meta itemprop="name" content="【每日算法题】冗余连接 II | freedom club">
       <meta itemprop="description" content="每天一道算法题，让生活变得更好">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          冗余连接 II
+          【每日算法题】冗余连接 II
         </h1>
 
         <div class="post-meta-container">
@@ -239,7 +239,7 @@
 <h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, n</span>):</span><br><span class="line">        <span class="variable language_">self</span>.parent = &#123;</span><br><span class="line">            i: i</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n+<span class="number">1</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">find</span>(<span class="params">self, node</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.parent[node] != node:</span><br><span class="line">            <span class="variable language_">self</span>.parent[node] = <span class="variable language_">self</span>.find(<span class="variable language_">self</span>.parent[node])</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.parent[node]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">union</span>(<span class="params">self, node1, node2</span>):</span><br><span class="line">        <span class="variable language_">self</span>.parent[<span class="variable language_">self</span>.find(node1)] = <span class="variable language_">self</span>.find(node2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">findRedundantDirectedConnection</span>(<span class="params">self, edges: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        union_find = UnionFind(<span class="built_in">len</span>(edges))</span><br><span class="line">        node_parent_map = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> (start, end) <span class="keyword">in</span> edges:</span><br><span class="line">            <span class="keyword">if</span> end <span class="keyword">in</span> node_parent_map:</span><br><span class="line">                <span class="comment"># 先计算入度值，如果入度为 2 ，则表示两条边有一条是重复边</span></span><br><span class="line">                <span class="keyword">for</span> remove <span class="keyword">in</span> [[start, end], [node_parent_map[end], end]]:</span><br><span class="line">                    <span class="keyword">if</span> <span class="variable language_">self</span>.is_link(edges, remove):</span><br><span class="line">                        <span class="keyword">return</span> remove</span><br><span class="line">            node_parent_map[end] = start</span><br><span class="line">            <span class="keyword">if</span> union_find.find(start) == union_find.find(end):</span><br><span class="line">                <span class="comment"># 成环</span></span><br><span class="line">                circle = [start, end]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                union_find.union(start, end)</span><br><span class="line">        <span class="keyword">return</span> circle</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">is_link</span>(<span class="params">self, edges, remove</span>):</span><br><span class="line">        union_find = UnionFind(<span class="built_in">len</span>(edges))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(edges)):</span><br><span class="line">            <span class="keyword">if</span> edges[i] == remove:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            union_find.union(edges[i][<span class="number">0</span>], edges[i][<span class="number">1</span>])</span><br><span class="line">        root = &#123;union_find.find(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(edges)+<span class="number">1</span>)&#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> <span class="built_in">len</span>(root) == <span class="number">1</span> <span class="keyword">else</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>本题可以继续套用的昨天的方法，遍历edges + 图的深度遍历，不过需要注意的是这次是有向图，需要做略微调整。</p>
-<a href="/2024/10/27/%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5/" title="冗余连接">冗余连接</a>
+<a href="/2024/10/27/%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5/" title="【每日算法题】冗余连接">【每日算法题】冗余连接</a>
 
 <p>又学习了一下使用并查集的方法来进行编写。</p>
 <ul>
@@ -274,8 +274,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/27/%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5/" rel="prev" title="冗余连接">
-                  <i class="fa fa-angle-left"></i> 冗余连接
+                <a href="/2024/10/27/%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5/" rel="prev" title="【每日算法题】冗余连接">
+                  <i class="fa fa-angle-left"></i> 【每日算法题】冗余连接
                 </a>
             </div>
             <div class="post-nav-item">
