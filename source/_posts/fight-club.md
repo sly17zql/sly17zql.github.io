@@ -10,7 +10,6 @@ categories:
   - 电影
 ---
 
-{% aplayerlrc "where is my mind" "Pixies" "https://music.163.com/#/song?id=27070579" %}
-{% endaplayerlrc %}
+{% meting "27070579" "netease" "song" %}
 
 {% asset_img fightclub.jpg %}
