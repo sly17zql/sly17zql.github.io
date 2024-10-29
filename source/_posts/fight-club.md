@@ -10,6 +10,4 @@ categories:
   - 电影
 ---
 
-{% meting "27070579" "netease" "song" %}
-
 {% asset_img fightclub.jpg %}
