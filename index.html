@@ -50,6 +50,8 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
+<link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
+<script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -211,7 +213,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <img src="/2024/10/29/fight-club/fightclub.jpg" class="">
+          <div id="aplayer-aQVDMjdu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+				<pre class="aplayer-lrc-content"></pre>
+			</div>
+			<script>
+				var ap = new APlayer({
+					element: document.getElementById("aplayer-aQVDMjdu"),
+					narrow: false,
+					autoplay: false,
+					showlrc: 2,
+					music: {
+						title: "where is my mind",
+						author: "Pixies",
+						url: "https://music.163.com/#/song?id=27070579",
+						pic: "",
+					}
+				});
+				window.aplayers || (window.aplayers = []);
+				window.aplayers.push(ap);
+			</script>
+
+<img src="/2024/10/29/fight-club/fightclub.jpg" class="">
 
       
     </div>
