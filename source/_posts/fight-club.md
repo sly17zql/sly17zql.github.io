@@ -8,7 +8,6 @@ tags:
   - 人生
 categories:
   - 电影
-  - 电影推荐
 ---
 
 {% asset_img fightclub.jpg %}
