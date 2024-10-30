@@ -11,3 +11,5 @@ categories:
 ---
 
 {% asset_img fightclub.jpg %}
+
+fight club 大概就是我人生中最喜欢的电影
