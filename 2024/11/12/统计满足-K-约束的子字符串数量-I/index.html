@@ -21,26 +21,26 @@
 
     <meta name="description" content="每天一道算法题，让生活变得更好">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【每日算法题】找到连续赢 K 场比赛的第一位玩家">
-<meta property="og:url" content="https://sly17zql.github.io/2024/10/24/%E6%89%BE%E5%88%B0%E8%BF%9E%E7%BB%AD%E8%B5%A2-K-%E5%9C%BA%E6%AF%94%E8%B5%9B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BD%8D%E7%8E%A9%E5%AE%B6/index.html">
+<meta property="og:title" content="【每日算法题】统计满足 K 约束的子字符串数量 I">
+<meta property="og:url" content="https://sly17zql.github.io/2024/11/12/%E7%BB%9F%E8%AE%A1%E6%BB%A1%E8%B6%B3-K-%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E9%87%8F-I/index.html">
 <meta property="og:site_name" content="freedom club">
 <meta property="og:description" content="每天一道算法题，让生活变得更好">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-24T07:00:35.000Z">
-<meta property="article:modified_time" content="2024-10-24T07:00:35.000Z">
+<meta property="article:published_time" content="2024-11-12T02:14:32.000Z">
+<meta property="article:modified_time" content="2024-11-12T02:20:56.920Z">
 <meta property="article:author" content="咿呦">
-<meta property="article:tag" content="数组">
+<meta property="article:tag" content="滑动窗口">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sly17zql.github.io/2024/10/24/%E6%89%BE%E5%88%B0%E8%BF%9E%E7%BB%AD%E8%B5%A2-K-%E5%9C%BA%E6%AF%94%E8%B5%9B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BD%8D%E7%8E%A9%E5%AE%B6/">
+<link rel="canonical" href="https://sly17zql.github.io/2024/11/12/%E7%BB%9F%E8%AE%A1%E6%BB%A1%E8%B6%B3-K-%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E9%87%8F-I/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/10/24/%E6%89%BE%E5%88%B0%E8%BF%9E%E7%BB%AD%E8%B5%A2-K-%E5%9C%BA%E6%AF%94%E8%B5%9B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BD%8D%E7%8E%A9%E5%AE%B6/","path":"2024/10/24/找到连续赢-K-场比赛的第一位玩家/","title":"【每日算法题】找到连续赢 K 场比赛的第一位玩家"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/11/12/%E7%BB%9F%E8%AE%A1%E6%BB%A1%E8%B6%B3-K-%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E9%87%8F-I/","path":"2024/11/12/统计满足-K-约束的子字符串数量-I/","title":"【每日算法题】统计满足 K 约束的子字符串数量 I"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【每日算法题】找到连续赢 K 场比赛的第一位玩家 | freedom club</title>
+<title>【每日算法题】统计满足 K 约束的子字符串数量 I | freedom club</title>
   
 
 
@@ -113,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%BE%E5%88%B0%E8%BF%9E%E7%BB%AD%E8%B5%A2-K-%E5%9C%BA%E6%AF%94%E8%B5%9B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BD%8D%E7%8E%A9%E5%AE%B6"><span class="nav-number">1.</span> <span class="nav-text">找到连续赢 K 场比赛的第一位玩家</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E6%BB%A1%E8%B6%B3-K-%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E9%87%8F-I"><span class="nav-number">1.</span> <span class="nav-text">统计满足 K 约束的子字符串数量 I</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -165,7 +165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/10/24/%E6%89%BE%E5%88%B0%E8%BF%9E%E7%BB%AD%E8%B5%A2-K-%E5%9C%BA%E6%AF%94%E8%B5%9B%E7%9A%84%E7%AC%AC%E4%B8%80%E4%BD%8D%E7%8E%A9%E5%AE%B6/">
+    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/11/12/%E7%BB%9F%E8%AE%A1%E6%BB%A1%E8%B6%B3-K-%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E9%87%8F-I/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -178,12 +178,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【每日算法题】找到连续赢 K 场比赛的第一位玩家 | freedom club">
+      <meta itemprop="name" content="【每日算法题】统计满足 K 约束的子字符串数量 I | freedom club">
       <meta itemprop="description" content="每天一道算法题，让生活变得更好">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【每日算法题】找到连续赢 K 场比赛的第一位玩家
+          【每日算法题】统计满足 K 约束的子字符串数量 I
         </h1>
 
         <div class="post-meta-container">
@@ -193,8 +193,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-10-24 15:00:35" itemprop="dateCreated datePublished" datetime="2024-10-24T15:00:35+08:00">2024-10-24</time>
+      <time title="创建时间：2024-11-12 10:14:32 / 修改时间：10:20:56" itemprop="dateCreated datePublished" datetime="2024-11-12T10:14:32+08:00">2024-11-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,23 +232,19 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h4 id="找到连续赢-K-场比赛的第一位玩家"><a href="#找到连续赢-K-场比赛的第一位玩家" class="headerlink" title="找到连续赢 K 场比赛的第一位玩家"></a>找到连续赢 K 场比赛的第一位玩家</h4><p>有 <code>n</code> 位玩家在进行比赛，玩家编号依次为 <code>0</code> 到 <code>n - 1</code> 。</p>
-<p>给你一个长度为 <code>n</code> 的整数数组 <code>skills</code> 和一个 <strong>正</strong> 整数 <code>k</code> ，其中 <code>skills[i]</code> 是第 <code>i</code> 位玩家的技能等级。<code>skills</code> 中所有整数 <strong>互不相同</strong> 。</p>
-<p>所有玩家从编号 <code>0</code> 到 <code>n - 1</code> 排成一列。</p>
-<p>比赛进行方式如下：</p>
+    <div class="post-body" itemprop="articleBody"><h3 id="统计满足-K-约束的子字符串数量-I"><a href="#统计满足-K-约束的子字符串数量-I" class="headerlink" title="统计满足 K 约束的子字符串数量 I"></a>统计满足 K 约束的子字符串数量 I</h3><p>给你一个 二进制 字符串 s 和一个整数 k。</p>
+<p>如果一个 二进制字符串 满足以下任一条件，则认为该字符串满足 k 约束：</p>
 <ul>
-<li>队列中最前面两名玩家进行一场比赛，技能等级 <strong>更高</strong> 的玩家胜出。</li>
-<li>比赛后，获胜者保持在队列的开头，而失败者排到队列的末尾。</li>
+<li>字符串中 0 的数量最多为 k。</li>
+<li>字符串中 1 的数量最多为 k。</li>
 </ul>
-<p>这个比赛的赢家是 <strong>第一位连续</strong> 赢下 <code>k</code> 场比赛的玩家。</p>
-<p>请你返回这个比赛的赢家编号。</p>
-<h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">List</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">findWinningPlayer</span>(<span class="params">self, skills: <span class="type">List</span>[<span class="built_in">int</span>], k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        max_skill = skills[<span class="number">0</span>]</span><br><span class="line">        max_skill_index = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> index, n <span class="keyword">in</span> <span class="built_in">enumerate</span>(skills[<span class="number">1</span>:], start=<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> n &gt; max_skill:</span><br><span class="line">                max_skill_index = index</span><br><span class="line">                max_skill = n</span><br><span class="line"></span><br><span class="line">        length = <span class="built_in">len</span>(skills)</span><br><span class="line">        <span class="keyword">if</span> k &gt;= length - <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> max_skill_index</span><br><span class="line"></span><br><span class="line">        player_index = <span class="number">0</span></span><br><span class="line">        step = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, length):</span><br><span class="line">            <span class="keyword">if</span> skills[player_index] &gt; skills[i]:</span><br><span class="line">                step += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                player_index = i</span><br><span class="line">                step = <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> step == k:</span><br><span class="line">                <span class="keyword">return</span> player_index</span><br><span class="line">        <span class="keyword">return</span> max_skill_index</span><br></pre></td></tr></table></figure>
+<p>返回一个整数，表示 s 的所有满足 k 约束 的 子字符串 的数量。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">countKConstraintSubstrings</span>(<span class="params">self, s: <span class="built_in">str</span>, k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = <span class="number">0</span></span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        pre_1 = <span class="number">1</span> <span class="keyword">if</span> s[<span class="number">0</span>] == <span class="string">&#x27;1&#x27;</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">        pre_0 = <span class="number">1</span> <span class="keyword">if</span> s[<span class="number">0</span>] == <span class="string">&#x27;0&#x27;</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">        ans += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> right &lt; <span class="built_in">len</span>(s) - <span class="number">1</span>:</span><br><span class="line">            cur = s[right+<span class="number">1</span>]</span><br><span class="line">            pre_1 += <span class="number">1</span> <span class="keyword">if</span> cur == <span class="string">&quot;1&quot;</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">            pre_0 += <span class="number">1</span> <span class="keyword">if</span> cur == <span class="string">&quot;0&quot;</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">            <span class="keyword">if</span> pre_1 &gt; k <span class="keyword">and</span> pre_1 &gt; k:</span><br><span class="line">                <span class="keyword">while</span> pre_0 &gt; k <span class="keyword">and</span> pre_1 &gt; k:</span><br><span class="line">                    pre_0 -= <span class="number">1</span> <span class="keyword">if</span> s[left] == <span class="string">&#x27;0&#x27;</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">                    pre_1 -= <span class="number">1</span> <span class="keyword">if</span> s[left] == <span class="string">&quot;1&quot;</span> <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line">                    left += <span class="number">1</span></span><br><span class="line">            right += <span class="number">1</span></span><br><span class="line">            ans += (right - left) + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
 
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>需要连赢K场，分两种情况判断：</p>
-<p>1、如果要大于等于 length，那直接返回最大值 max_skill_index 的下标</p>
-<p>2、如果是小于length，本质逻辑是遍历这个数组，找到当前的 player_index，并记录下当前可以连赢的场次，如果满足K的数量时，直接返回。否则，当遍历完一遍以后，还没有找到结果，那么此时player_index一定是数组的最大值 max_skill_index ，想要完成K，那么一定只能是数组的最大值 max_skill_index</p>
-<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>时间复杂度: O(N)</p>
-<p>空间复杂度: O(1)</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>1和0的统计值任意一个小于等于K 就是合法字符串。可以以右边界为基准进行计算，并实时维护前置的 0 和 1 的统计值。加上当前值如果是合法的，那么加入 右边界 减去 左边界 的长度+1的数量。</p>
+<p>如果加入当前值，已经不合法，那从前开始剔除数值，直到再次符合时，下次就直接在当前维护的left开始进行统计。</p>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度：O(N)</p>
+<p>空间复杂度：O(1)</p>
 
     </div>
 
@@ -257,21 +254,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+              <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag"># 滑动窗口</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/23/%E8%80%81%E9%A9%AC%E7%9A%841984/" rel="prev" title="老马的1984">
-                  <i class="fa fa-angle-left"></i> 老马的1984
+                <a href="/2024/11/10/%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%8D%95%E4%B8%80%E5%85%83%E7%B4%A0/" rel="prev" title="【每日算法题】有序数组中的单一元素">
+                  <i class="fa fa-angle-left"></i> 【每日算法题】有序数组中的单一元素
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/" rel="next" title="【每日算法题】执行操作可获得的最大总奖励 I">
-                  【每日算法题】执行操作可获得的最大总奖励 I <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
