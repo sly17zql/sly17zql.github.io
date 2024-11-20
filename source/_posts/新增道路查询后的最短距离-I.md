@@ -1,5 +1,6 @@
 ---
 title: 【每日算法题】新增道路查询后的最短距离 I
+description: 每天一道算法题，让生活变得更好
 tags:
   - 广度遍历
 categories:
