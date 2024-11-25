@@ -21,27 +21,26 @@
 
     <meta name="description" content="每天一道算法题，让生活变得更好">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【每日算法题】执行操作可获得的最大总奖励 II">
-<meta property="og:url" content="https://sly17zql.github.io/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/index.html">
+<meta property="og:title" content="【每日算法题】网络延迟时间">
+<meta property="og:url" content="https://sly17zql.github.io/2024/11/25/%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4/index.html">
 <meta property="og:site_name" content="freedom club">
 <meta property="og:description" content="每天一道算法题，让生活变得更好">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-26T05:04:32.000Z">
-<meta property="article:modified_time" content="2024-10-26T05:04:32.000Z">
+<meta property="article:published_time" content="2024-11-25T02:42:49.000Z">
+<meta property="article:modified_time" content="2024-11-25T02:44:35.664Z">
 <meta property="article:author" content="咿呦">
-<meta property="article:tag" content="位运算">
-<meta property="article:tag" content="DP">
+<meta property="article:tag" content="遍历">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sly17zql.github.io/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/">
+<link rel="canonical" href="https://sly17zql.github.io/2024/11/25/%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/","path":"2024/10/26/执行操作可获得的最大总奖励-II/","title":"【每日算法题】执行操作可获得的最大总奖励 II"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/11/25/%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4/","path":"2024/11/25/网络延迟时间/","title":"【每日算法题】网络延迟时间"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【每日算法题】执行操作可获得的最大总奖励 II | freedom club</title>
+<title>【每日算法题】网络延迟时间 | freedom club</title>
   
 
 
@@ -114,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II"><span class="nav-number">1.</span> <span class="nav-text">执行操作可获得的最大总奖励 II</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4"><span class="nav-number">1.</span> <span class="nav-text">网络延迟时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,7 +165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/10/26/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-II/">
+    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/11/25/%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -179,12 +178,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【每日算法题】执行操作可获得的最大总奖励 II | freedom club">
+      <meta itemprop="name" content="【每日算法题】网络延迟时间 | freedom club">
       <meta itemprop="description" content="每天一道算法题，让生活变得更好">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【每日算法题】执行操作可获得的最大总奖励 II
+          【每日算法题】网络延迟时间
         </h1>
 
         <div class="post-meta-container">
@@ -194,8 +193,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-10-26 13:04:32" itemprop="dateCreated datePublished" datetime="2024-10-26T13:04:32+08:00">2024-10-26</time>
+      <time title="创建时间：2024-11-25 10:42:49 / 修改时间：10:44:35" itemprop="dateCreated datePublished" datetime="2024-11-25T10:42:49+08:00">2024-11-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -232,28 +232,14 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h4 id="执行操作可获得的最大总奖励-II"><a href="#执行操作可获得的最大总奖励-II" class="headerlink" title="执行操作可获得的最大总奖励 II"></a>执行操作可获得的最大总奖励 II</h4><p>给你一个整数数组 <code>rewardValues</code>，长度为 <code>n</code>，代表奖励的值。</p>
-<p>最初，你的总奖励 <code>x</code> 为 0，所有下标都是 <strong>未标记</strong> 的。你可以执行以下操作 <strong>任意次</strong> ：</p>
-<ul>
-<li>从区间 <code>[0, n - 1]</code> 中选择一个 <strong>未标记</strong> 的下标 <code>i</code>。</li>
-<li>如果 <code>rewardValues[i]</code> <strong>大于</strong> 你当前的总奖励 <code>x</code>，则将 <code>rewardValues[i]</code> 加到 <code>x</code> 上（即 <code>x = x + rewardValues[i]</code>），并 <strong>标记</strong> 下标 <code>i</code>。</li>
-</ul>
-<p>以整数形式返回执行最优操作能够获得的 <strong>最大</strong> 总奖励。</p>
-<h4 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maxTotalReward</span>(<span class="params">self, rewardValues: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        ret = <span class="number">1</span></span><br><span class="line">        rewardValues.sort()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> rewardValues:</span><br><span class="line">            ret |= (((<span class="number">1</span> &lt;&lt; item) - <span class="number">1</span>) &amp; ret) &lt;&lt; item</span><br><span class="line">        <span class="keyword">return</span> ret.bit_length() - <span class="number">1</span></span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h3 id="网络延迟时间"><a href="#网络延迟时间" class="headerlink" title="网络延迟时间"></a>网络延迟时间</h3><p>有 n 个网络节点，标记为 1 到 n。</p>
+<p>给你一个列表 times，表示信号经过 有向 边的传递时间。 times[i] &#x3D; (ui, vi, wi)，其中 ui 是源节点，vi 是目标节点， wi 是一个信号从源节点传递到目标节点的时间。</p>
+<p>现在，从某个节点 K 发出一个信号。需要多久才能使所有节点都收到信号？如果不能使所有节点收到信号，返回 -1 。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">networkDelayTime</span>(<span class="params">self, times: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]], n: <span class="built_in">int</span>, k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        min_dist_map = [math.inf <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n)]</span><br><span class="line">        graph_map = defaultdict(<span class="built_in">list</span>)</span><br><span class="line">        <span class="keyword">for</span> (start, end, d) <span class="keyword">in</span> times:</span><br><span class="line">            graph_map[start].append([end, d])</span><br><span class="line"></span><br><span class="line">        min_dist_map[k-<span class="number">1</span>] = <span class="number">0</span></span><br><span class="line">        traveled = &#123;&#125;</span><br><span class="line">        <span class="keyword">while</span> <span class="built_in">len</span>(traveled) &lt; n:</span><br><span class="line">            min_dis = math.inf</span><br><span class="line">            min_index = <span class="literal">None</span></span><br><span class="line">            <span class="keyword">for</span> neighbor <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">                <span class="keyword">if</span> traveled.get(neighbor) <span class="keyword">is</span> <span class="literal">True</span>:</span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line">                <span class="keyword">if</span> min_dist_map[neighbor] &lt; min_dis:</span><br><span class="line">                    min_dis = min_dist_map[neighbor]</span><br><span class="line">                    min_index = neighbor</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> min_index <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">            traveled[min_index] = <span class="literal">True</span></span><br><span class="line">            <span class="keyword">for</span> (index, distance) <span class="keyword">in</span> graph_map[min_index+<span class="number">1</span>]:</span><br><span class="line">                neighbor = index - <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> distance + min_dis &lt; min_dist_map[neighbor]:</span><br><span class="line">                    min_dist_map[neighbor] = distance + min_dis</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span>(min_dist_map)</span><br></pre></td></tr></table></figure>
 
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><a href="/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/" title="【每日算法题】执行操作可获得的最大总奖励 I">【每日算法题】执行操作可获得的最大总奖励 I</a>
-
-<p>基本思路： 由于上一篇文章的思路可以基本套用，基于之前的思路，由于本体的数据量大小提高到了 5 * 10 ^ 4，导致原本的解体方式会超时时间限制，所以再次前提之上做出优化。</p>
-<p>优化思路：使用位运算代替，之前的遍历数组，基本思想，就是因为每个值是一个bool值，可以实现为True，无法实现为False。</p>
-<p>优化方案具体：</p>
-<ul>
-<li>由于我们从小到大的遍历思想，当我们遍历到大小 N 的数值时，我们需要判断 0-（N-1）是否有满足条件的答案出现，如果有那么便可以作为答案加入到现有答案序列中。</li>
-<li>先将 N 转换为 N 位长度的二进制，减一，表示 1 - （N - 1）位。</li>
-<li>然后与 当前结果 ret 取 按位与，如果当前位为 1 表示可以实现。</li>
-<li>最后与当前数值求和，那么整体往左移 N，即可得到一个目标值的 新的 ret。</li>
-</ul>
-<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h4><p>rewardValues 长度为N， 最大值位 M</p>
-<p>时间复杂度：NM&#x2F;32 (这个时间复杂度和空间复杂度的表示暂时存惑)<br>空间复杂度：M&#x2F;32</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>迪杰斯特拉算法，计算从 具体某个点 出发，到达每个点的最短时间。</p>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度：O(n^2)</p>
+<p>空间复杂度：O(n)</p>
 
     </div>
 
@@ -263,22 +249,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag"># 位运算</a>
-              <a href="/tags/DP/" rel="tag"># DP</a>
+              <a href="/tags/%E9%81%8D%E5%8E%86/" rel="tag"># 遍历</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/25/%E6%89%A7%E8%A1%8C%E6%93%8D%E4%BD%9C%E5%8F%AF%E8%8E%B7%E5%BE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E5%A5%96%E5%8A%B1-I/" rel="prev" title="【每日算法题】执行操作可获得的最大总奖励 I">
-                  <i class="fa fa-angle-left"></i> 【每日算法题】执行操作可获得的最大总奖励 I
+                <a href="/2024/11/22/%E7%BB%9F%E8%AE%A1%E4%B8%8D%E6%98%AF%E7%89%B9%E6%AE%8A%E6%95%B0%E5%AD%97%E7%9A%84%E6%95%B0%E5%AD%97%E6%95%B0%E9%87%8F/" rel="prev" title="【每日算法题】统计不是特殊数字的数字数量">
+                  <i class="fa fa-angle-left"></i> 【每日算法题】统计不是特殊数字的数字数量
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/10/26/blog%E5%BC%80%E7%AF%87%E9%9A%8F%E7%AC%94/" rel="next" title="blog开篇随笔">
-                  blog开篇随笔 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
