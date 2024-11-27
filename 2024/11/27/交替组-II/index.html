@@ -21,26 +21,26 @@
 
     <meta name="description" content="每天一道算法题，让生活变得更好">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【每日算法题】有序数组中的单一元素">
-<meta property="og:url" content="https://sly17zql.github.io/2024/11/10/%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%8D%95%E4%B8%80%E5%85%83%E7%B4%A0/index.html">
+<meta property="og:title" content="【每日算法题】交替组 II">
+<meta property="og:url" content="https://sly17zql.github.io/2024/11/27/%E4%BA%A4%E6%9B%BF%E7%BB%84-II/index.html">
 <meta property="og:site_name" content="freedom club">
 <meta property="og:description" content="每天一道算法题，让生活变得更好">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-10T06:53:56.000Z">
-<meta property="article:modified_time" content="2024-11-10T06:53:56.000Z">
+<meta property="article:published_time" content="2024-11-27T13:17:13.000Z">
+<meta property="article:modified_time" content="2024-11-27T13:21:57.067Z">
 <meta property="article:author" content="咿呦">
-<meta property="article:tag" content="二分">
+<meta property="article:tag" content="滑动窗口">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sly17zql.github.io/2024/11/10/%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%8D%95%E4%B8%80%E5%85%83%E7%B4%A0/">
+<link rel="canonical" href="https://sly17zql.github.io/2024/11/27/%E4%BA%A4%E6%9B%BF%E7%BB%84-II/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/11/10/%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%8D%95%E4%B8%80%E5%85%83%E7%B4%A0/","path":"2024/11/10/有序数组中的单一元素/","title":"【每日算法题】有序数组中的单一元素"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/11/27/%E4%BA%A4%E6%9B%BF%E7%BB%84-II/","path":"2024/11/27/交替组-II/","title":"【每日算法题】交替组 II"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【每日算法题】有序数组中的单一元素 | freedom club</title>
+<title>【每日算法题】交替组 II | freedom club</title>
   
 
 
@@ -113,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%8D%95%E4%B8%80%E5%85%83%E7%B4%A0"><span class="nav-number">1.</span> <span class="nav-text">有序数组中的单一元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%9B%BF%E7%BB%84-II"><span class="nav-number">1.</span> <span class="nav-text">交替组 II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -165,7 +165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/11/10/%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%8D%95%E4%B8%80%E5%85%83%E7%B4%A0/">
+    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/11/27/%E4%BA%A4%E6%9B%BF%E7%BB%84-II/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -178,12 +178,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【每日算法题】有序数组中的单一元素 | freedom club">
+      <meta itemprop="name" content="【每日算法题】交替组 II | freedom club">
       <meta itemprop="description" content="每天一道算法题，让生活变得更好">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【每日算法题】有序数组中的单一元素
+          【每日算法题】交替组 II
         </h1>
 
         <div class="post-meta-container">
@@ -193,8 +193,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-11-10 14:53:56" itemprop="dateCreated datePublished" datetime="2024-11-10T14:53:56+08:00">2024-11-10</time>
+      <time title="创建时间：2024-11-27 21:17:13 / 修改时间：21:21:57" itemprop="dateCreated datePublished" datetime="2024-11-27T21:17:13+08:00">2024-11-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,14 +232,16 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="有序数组中的单一元素"><a href="#有序数组中的单一元素" class="headerlink" title="有序数组中的单一元素"></a>有序数组中的单一元素</h3><p>给你一个仅由整数组成的有序数组，其中每个元素都会出现两次，唯有一个数只会出现一次。</p>
-<p>请你找出并返回只出现一次的那个数。</p>
-<p>你设计的解决方案必须满足 O(log n) 时间复杂度和 O(1) 空间复杂度。</p>
-<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">singleNonDuplicate</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">check</span>(<span class="params">node</span>):</span><br><span class="line">            <span class="keyword">if</span> node % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">if</span> nums[node+<span class="number">1</span>] == nums[node]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">elif</span> node % <span class="number">2</span> != <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">if</span> nums[node] == nums[node-<span class="number">1</span>]:</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        start = <span class="number">0</span></span><br><span class="line">        end = <span class="built_in">len</span>(nums) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> start &lt; end:</span><br><span class="line">            mid = (start + end) // <span class="number">2</span></span><br><span class="line">            <span class="keyword">if</span> check(mid):</span><br><span class="line">                start = mid + <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                end = mid</span><br><span class="line">        <span class="keyword">return</span> nums[start]</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h3 id="交替组-II"><a href="#交替组-II" class="headerlink" title="交替组 II"></a>交替组 II</h3><p>给你一个整数数组 colors 和一个整数 k ，colors表示一个由红色和蓝色瓷砖组成的环，第 i 块瓷砖的颜色为 colors[i] ：</p>
+<p>colors[i] &#x3D;&#x3D; 0 表示第 i 块瓷砖的颜色是 红色 。<br>colors[i] &#x3D;&#x3D; 1 表示第 i 块瓷砖的颜色是 蓝色 。<br>环中连续 k 块瓷砖的颜色如果是 交替 颜色（也就是说除了第一块和最后一块瓷砖以外，中间瓷砖的颜色与它 左边 和 右边 的颜色都不同），那么它被称为一个 交替 组。</p>
+<p>请你返回 交替 组的数目。</p>
+<p>注意 ，由于 colors 表示一个 环 ，第一块 瓷砖和 最后一块 瓷砖是相邻的。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">numberOfAlternatingGroups</span>(<span class="params">self, colors: <span class="type">List</span>[<span class="built_in">int</span>], k: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        ans = <span class="number">0</span></span><br><span class="line">        colors += colors[:k-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">        start = <span class="number">0</span></span><br><span class="line">        pre = colors[start]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(colors)):</span><br><span class="line">            cur = colors[i]</span><br><span class="line">            <span class="keyword">if</span> cur == pre:</span><br><span class="line">                start = i</span><br><span class="line">                end = i</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            end = i</span><br><span class="line">            pre = colors[i]</span><br><span class="line">            <span class="keyword">if</span> end - start + <span class="number">1</span> == k:</span><br><span class="line">                ans += <span class="number">1</span></span><br><span class="line">                start = start + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
 
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>由题可知 数组 中只有一个出现一次其他都是两次，那么理论上到当前index还都是出现两次的话，那么 如果index为偶数时，index和index+1应该是同一个数值；如果为奇数，index和index-1应该是同一个数值，如果不相同，说明只出现一次的数值在index之前。</p>
-<p>剩余的便可以使用二分法进行计算得到了。</p>
-<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度：O(logN)</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>据题知，因为 k&lt;length，所以可以在color末尾添加k-1的长度，colors +&#x3D; colors[:k-1]，作为需要遍历的整个长度。</p>
+<p>记录start和end两个index，维护的是合法的一个块，如果当前合法块的长度等于k，那么表示能够成为答案，否则，继续往后遍历。</p>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>k 为 k的值，n为colors的长度</p>
+<p>时间复杂度：O(K+N)</p>
 <p>空间复杂度：O(1)</p>
 
     </div>
@@ -249,21 +252,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E4%BA%8C%E5%88%86/" rel="tag"># 二分</a>
+              <a href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag"># 滑动窗口</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/11/09/%E8%AE%BE%E8%AE%A1%E7%9B%B8%E9%82%BB%E5%85%83%E7%B4%A0%E6%B1%82%E5%92%8C%E6%9C%8D%E5%8A%A1/" rel="prev" title="【每日算法题】设计相邻元素求和服务">
-                  <i class="fa fa-angle-left"></i> 【每日算法题】设计相邻元素求和服务
+                <a href="/2024/11/25/%E7%BD%91%E7%BB%9C%E5%BB%B6%E8%BF%9F%E6%97%B6%E9%97%B4/" rel="prev" title="【每日算法题】网络延迟时间">
+                  <i class="fa fa-angle-left"></i> 【每日算法题】网络延迟时间
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/11/12/%E7%BB%9F%E8%AE%A1%E6%BB%A1%E8%B6%B3-K-%E7%BA%A6%E6%9D%9F%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E9%87%8F-I/" rel="next" title="【每日算法题】统计满足 K 约束的子字符串数量 I">
-                  【每日算法题】统计满足 K 约束的子字符串数量 I <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
