@@ -21,26 +21,26 @@
 
     <meta name="description" content="每天一道算法题，让生活变得更好">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【每日算法题】最少翻转次数使二进制矩阵回文 I">
-<meta property="og:url" content="https://sly17zql.github.io/2024/11/15/%E6%9C%80%E5%B0%91%E7%BF%BB%E8%BD%AC%E6%AC%A1%E6%95%B0%E4%BD%BF%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9F%A9%E9%98%B5%E5%9B%9E%E6%96%87-I/index.html">
+<meta property="og:title" content="【每日算法题】变为棋盘">
+<meta property="og:url" content="https://sly17zql.github.io/2024/12/08/%E5%8F%98%E4%B8%BA%E6%A3%8B%E7%9B%98/index.html">
 <meta property="og:site_name" content="freedom club">
 <meta property="og:description" content="每天一道算法题，让生活变得更好">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-15T02:13:27.000Z">
-<meta property="article:modified_time" content="2024-11-15T02:13:27.000Z">
+<meta property="article:published_time" content="2024-12-08T11:41:29.000Z">
+<meta property="article:modified_time" content="2024-12-08T11:49:59.549Z">
 <meta property="article:author" content="咿呦">
-<meta property="article:tag" content="双指针">
+<meta property="article:tag" content="位运算">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sly17zql.github.io/2024/11/15/%E6%9C%80%E5%B0%91%E7%BF%BB%E8%BD%AC%E6%AC%A1%E6%95%B0%E4%BD%BF%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9F%A9%E9%98%B5%E5%9B%9E%E6%96%87-I/">
+<link rel="canonical" href="https://sly17zql.github.io/2024/12/08/%E5%8F%98%E4%B8%BA%E6%A3%8B%E7%9B%98/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/11/15/%E6%9C%80%E5%B0%91%E7%BF%BB%E8%BD%AC%E6%AC%A1%E6%95%B0%E4%BD%BF%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9F%A9%E9%98%B5%E5%9B%9E%E6%96%87-I/","path":"2024/11/15/最少翻转次数使二进制矩阵回文-I/","title":"【每日算法题】最少翻转次数使二进制矩阵回文 I"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2024/12/08/%E5%8F%98%E4%B8%BA%E6%A3%8B%E7%9B%98/","path":"2024/12/08/变为棋盘/","title":"【每日算法题】变为棋盘"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【每日算法题】最少翻转次数使二进制矩阵回文 I | freedom club</title>
+<title>【每日算法题】变为棋盘 | freedom club</title>
   
 
 
@@ -113,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%B0%91%E7%BF%BB%E8%BD%AC%E6%AC%A1%E6%95%B0%E4%BD%BF%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9F%A9%E9%98%B5%E5%9B%9E%E6%96%87-I"><span class="nav-number">1.</span> <span class="nav-text">最少翻转次数使二进制矩阵回文 I</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E4%B8%BA%E6%A3%8B%E7%9B%98"><span class="nav-number">1.</span> <span class="nav-text">变为棋盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -165,7 +165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/11/15/%E6%9C%80%E5%B0%91%E7%BF%BB%E8%BD%AC%E6%AC%A1%E6%95%B0%E4%BD%BF%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9F%A9%E9%98%B5%E5%9B%9E%E6%96%87-I/">
+    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2024/12/08/%E5%8F%98%E4%B8%BA%E6%A3%8B%E7%9B%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -178,12 +178,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【每日算法题】最少翻转次数使二进制矩阵回文 I | freedom club">
+      <meta itemprop="name" content="【每日算法题】变为棋盘 | freedom club">
       <meta itemprop="description" content="每天一道算法题，让生活变得更好">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【每日算法题】最少翻转次数使二进制矩阵回文 I
+          【每日算法题】变为棋盘
         </h1>
 
         <div class="post-meta-container">
@@ -193,8 +193,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-11-15 10:13:27" itemprop="dateCreated datePublished" datetime="2024-11-15T10:13:27+08:00">2024-11-15</time>
+      <time title="创建时间：2024-12-08 19:41:29 / 修改时间：19:49:59" itemprop="dateCreated datePublished" datetime="2024-12-08T19:41:29+08:00">2024-12-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,16 +232,17 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="最少翻转次数使二进制矩阵回文-I"><a href="#最少翻转次数使二进制矩阵回文-I" class="headerlink" title="最少翻转次数使二进制矩阵回文 I"></a>最少翻转次数使二进制矩阵回文 I</h3><p>给你一个 m x n 的二进制矩阵 grid 。</p>
-<p>如果矩阵中一行或者一列从前往后与从后往前读是一样的，那么我们称这一行或者这一列是 回文 的。</p>
-<p>你可以将 grid 中任意格子的值 翻转 ，也就是将格子里的值从 0 变成 1 ，或者从 1 变成 0 。</p>
-<p>请你返回 最少 翻转次数，使得矩阵 要么 所有行是 回文的 ，要么所有列是 回文的 。</p>
-<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">minFlips</span>(<span class="params">self, grid: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        row_ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(grid)):</span><br><span class="line">            left = <span class="number">0</span></span><br><span class="line">            right = <span class="built_in">len</span>(grid[<span class="number">0</span>])-<span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> left &lt; right:</span><br><span class="line">                <span class="keyword">if</span> grid[row][right] != grid[row][left]:</span><br><span class="line">                    row_ans += <span class="number">1</span></span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        col_ans = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(grid[<span class="number">0</span>])):</span><br><span class="line">            top = <span class="number">0</span></span><br><span class="line">            button = <span class="built_in">len</span>(grid) - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> top &lt; button:</span><br><span class="line">                <span class="keyword">if</span> grid[top][col] != grid[button][col]:</span><br><span class="line">                    col_ans += <span class="number">1</span></span><br><span class="line">                top += <span class="number">1</span></span><br><span class="line">                button -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">min</span>(row_ans, col_ans)</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h3 id="变为棋盘"><a href="#变为棋盘" class="headerlink" title="变为棋盘"></a>变为棋盘</h3><p>一个 n x n 的二维网络 board 仅由 0 和 1 组成 。每次移动，你能交换任意两列或是两行的位置。</p>
+<p>返回 将这个矩阵变为  “棋盘”  所需的最小移动次数 。如果不存在可行的变换，输出 -1。</p>
+<p>“棋盘” 是指任意一格的上下左右四个方向的值均与本身不同的矩阵。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">movesToChessboard</span>(<span class="params">self, board: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        first_row = board[<span class="number">0</span>]</span><br><span class="line">        row_c = Counter(first_row)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">abs</span>(row_c.get(<span class="number">0</span>, <span class="number">0</span>) - row_c.get(<span class="number">1</span>, <span class="number">0</span>)) &gt; <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        first_col = [board[i][<span class="number">0</span>] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(board))]</span><br><span class="line">        col_c = Counter(first_col)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">abs</span>(col_c.get(<span class="number">0</span>, <span class="number">0</span>) - col_c.get(<span class="number">1</span>, <span class="number">0</span>)) &gt; <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(board)):</span><br><span class="line">            same = board[i][<span class="number">0</span>] == first_row[<span class="number">0</span>]</span><br><span class="line">            <span class="keyword">for</span> x, y <span class="keyword">in</span> <span class="built_in">zip</span>(board[i], first_row):</span><br><span class="line">                <span class="keyword">if</span> (x == y) != same:</span><br><span class="line">                    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">min_swap</span>(<span class="params">arr: <span class="type">List</span>[<span class="built_in">int</span>], cnt: Counter</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">            n = <span class="built_in">len</span>(arr)</span><br><span class="line">            <span class="keyword">if</span> n % <span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">if</span> cnt.get(<span class="number">1</span>) &gt; cnt.get(<span class="number">0</span>):</span><br><span class="line">                    diff = <span class="built_in">sum</span>((i % <span class="number">2</span>) ^ x ^ <span class="number">1</span> <span class="keyword">for</span> i, x <span class="keyword">in</span> <span class="built_in">enumerate</span>(arr))</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    diff = <span class="built_in">sum</span>((i % <span class="number">2</span>) ^ x ^ <span class="number">0</span> <span class="keyword">for</span> i, x <span class="keyword">in</span> <span class="built_in">enumerate</span>(arr))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                diff = <span class="built_in">min</span>(</span><br><span class="line">                    <span class="built_in">sum</span>((i % <span class="number">2</span>) ^ x ^ <span class="number">1</span> <span class="keyword">for</span> i, x <span class="keyword">in</span> <span class="built_in">enumerate</span>(arr)),</span><br><span class="line">                    <span class="built_in">sum</span>((i % <span class="number">2</span>) ^ x ^ <span class="number">0</span> <span class="keyword">for</span> i, x <span class="keyword">in</span> <span class="built_in">enumerate</span>(arr))</span><br><span class="line">                )</span><br><span class="line">            <span class="keyword">return</span> diff // <span class="number">2</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> min_swap(first_row, row_c) + min_swap(first_col, col_c)</span><br></pre></td></tr></table></figure>
 
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>据题知，只要 行 或 列 其中一个满足回文既可以，使用双指针，行首和行末，逐行判断是否需要翻转；使用双指针，列头和列尾，逐列判断是否需要翻转。</p>
-<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>n 是 行数，m 是 列数</p>
-<p>时间复杂度：O(nm) </p>
-<p>空间复杂度：O(1)</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>逆向思维，棋盘可以转换为怎么样的样子呢。</p>
+<p>发现01010101和10101010，不论行怎么换，列怎么换，行和列都只会有两种情况，且互相完全相反。</p>
+<p>如果当前的行列只有两种情况，且偶数时数量相同，每行每列1和0的数量一样，奇数时数量差1，每行每列1和0的统计数量差1。</p>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>N 为 棋盘的宽度。</p>
+<p>时间复杂度：O(N^2)</p>
+<p>空间复杂度：O(N)</p>
 
     </div>
 
@@ -250,21 +252,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" rel="tag"># 双指针</a>
+              <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="tag"># 位运算</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/11/14/%E6%97%A0%E9%A2%98/" rel="prev" title="无聊随记">
-                  <i class="fa fa-angle-left"></i> 无聊随记
+                <a href="/2024/12/07/%E9%AA%91%E5%A3%AB%E5%9C%A8%E6%A3%8B%E7%9B%98%E4%B8%8A%E7%9A%84%E6%A6%82%E7%8E%87/" rel="prev" title="【每日算法题】骑士在棋盘上的概率">
+                  <i class="fa fa-angle-left"></i> 【每日算法题】骑士在棋盘上的概率
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/11/17/%E6%9C%80%E5%B0%91%E7%BF%BB%E8%BD%AC%E6%AC%A1%E6%95%B0%E4%BD%BF%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9F%A9%E9%98%B5%E5%9B%9E%E6%96%87-II/" rel="next" title="【每日算法题】最少翻转次数使二进制矩阵回文 II">
-                  【每日算法题】最少翻转次数使二进制矩阵回文 II <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
