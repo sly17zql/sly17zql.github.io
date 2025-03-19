@@ -21,26 +21,26 @@
 
     <meta name="description" content="每天一道算法题，让生活变得更好">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【每日算法题】每一个查询的最大美丽值">
-<meta property="og:url" content="https://sly17zql.github.io/2025/03/09/%E6%AF%8F%E4%B8%80%E4%B8%AA%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%9C%80%E5%A4%A7%E7%BE%8E%E4%B8%BD%E5%80%BC/index.html">
+<meta property="og:title" content="【每日算法题】转换二维数组">
+<meta property="og:url" content="https://sly17zql.github.io/2025/03/19/%E8%BD%AC%E6%8D%A2%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="freedom club">
 <meta property="og:description" content="每天一道算法题，让生活变得更好">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-09T12:04:26.000Z">
-<meta property="article:modified_time" content="2025-03-09T12:04:26.000Z">
+<meta property="article:published_time" content="2025-03-19T13:44:23.000Z">
+<meta property="article:modified_time" content="2025-03-19T13:45:00.963Z">
 <meta property="article:author" content="阿狗">
-<meta property="article:tag" content="二分">
+<meta property="article:tag" content="hashmap">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sly17zql.github.io/2025/03/09/%E6%AF%8F%E4%B8%80%E4%B8%AA%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%9C%80%E5%A4%A7%E7%BE%8E%E4%B8%BD%E5%80%BC/">
+<link rel="canonical" href="https://sly17zql.github.io/2025/03/19/%E8%BD%AC%E6%8D%A2%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2025/03/09/%E6%AF%8F%E4%B8%80%E4%B8%AA%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%9C%80%E5%A4%A7%E7%BE%8E%E4%B8%BD%E5%80%BC/","path":"2025/03/09/每一个查询的最大美丽值/","title":"【每日算法题】每一个查询的最大美丽值"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://sly17zql.github.io/2025/03/19/%E8%BD%AC%E6%8D%A2%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/","path":"2025/03/19/转换二维数组/","title":"【每日算法题】转换二维数组"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【每日算法题】每一个查询的最大美丽值 | freedom club</title>
+<title>【每日算法题】转换二维数组 | freedom club</title>
   
 
 
@@ -113,7 +113,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E4%B8%80%E4%B8%AA%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%9C%80%E5%A4%A7%E7%BE%8E%E4%B8%BD%E5%80%BC"><span class="nav-number">1.</span> <span class="nav-text">每一个查询的最大美丽值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">2.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94-1"><span class="nav-number">3.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="nav-number">1.</span> <span class="nav-text">转换二维数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E7%AD%94"><span class="nav-number">3.</span> <span class="nav-text">解答</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">4.</span> <span class="nav-text">复杂度</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -165,7 +165,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2025/03/09/%E6%AF%8F%E4%B8%80%E4%B8%AA%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%9C%80%E5%A4%A7%E7%BE%8E%E4%B8%BD%E5%80%BC/">
+    <link itemprop="mainEntityOfPage" href="https://sly17zql.github.io/2025/03/19/%E8%BD%AC%E6%8D%A2%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -178,12 +178,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【每日算法题】每一个查询的最大美丽值 | freedom club">
+      <meta itemprop="name" content="【每日算法题】转换二维数组 | freedom club">
       <meta itemprop="description" content="每天一道算法题，让生活变得更好">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【每日算法题】每一个查询的最大美丽值
+          【每日算法题】转换二维数组
         </h1>
 
         <div class="post-meta-container">
@@ -193,8 +193,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2025-03-09 20:04:26" itemprop="dateCreated datePublished" datetime="2025-03-09T20:04:26+08:00">2025-03-09</time>
+      <time title="创建时间：2025-03-19 21:44:23 / 修改时间：21:45:00" itemprop="dateCreated datePublished" datetime="2025-03-19T21:44:23+08:00">2025-03-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,18 +232,18 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="每一个查询的最大美丽值"><a href="#每一个查询的最大美丽值" class="headerlink" title="每一个查询的最大美丽值"></a>每一个查询的最大美丽值</h3><p>给你一个二维整数数组 items ，其中 items[i] &#x3D; [price[i], beauty[i]] 分别表示每一个物品的 价格 和 美丽值 。</p>
-<p>同时给你一个下标从 0 开始的整数数组 queries 。对于每个查询 queries[j] ，你想求出价格小于等于 queries[j] 的物品中，最大的美丽值 是多少。如果不存在符合条件的物品，那么查询的结果为 0 。</p>
-<p>请你返回一个长度与 queries 相同的数组 answer，其中 answer[j]是第 j 个查询的答案。</p>
-<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><ul>
-<li>需要为item进行排序，</li>
-<li>维护一个小于等于price的beauty的map，因为要找到小于等于当前价格的最大美丽值，假设：如果存在price为1的beauty为10，那么，price为2的beauty为5，但是因为1可以取到10，所以price也能取到10。</li>
-<li>随后遍历query，如果query本身存在于price_to_beauty的map中，那么可以直接取值；如果不存在，便通过二分法找到最后一个小于等于target的值，回去可以最大的beauty的值。</li>
+    <div class="post-body" itemprop="articleBody"><h3 id="转换二维数组"><a href="#转换二维数组" class="headerlink" title="转换二维数组"></a>转换二维数组</h3><p>给你一个整数数组 <code>nums</code> 。请你创建一个满足以下条件的二维数组：</p>
+<ul>
+<li>二维数组应该 <strong>只</strong> 包含数组 <code>nums</code> 中的元素。</li>
+<li>二维数组中的每一行都包含 <strong>不同</strong> 的整数。</li>
+<li>二维数组的行数应尽可能 <strong>少</strong> 。</li>
 </ul>
-<h3 id="解答-1"><a href="#解答-1" class="headerlink" title="解答"></a>解答</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maximumBeauty</span>(<span class="params">self, items: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]], queries: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        items.sort()</span><br><span class="line">        beauty_map = OrderedDict()</span><br><span class="line">        cur_max = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> (price, beauty) <span class="keyword">in</span> items:</span><br><span class="line">            cur_max = <span class="built_in">max</span>(cur_max, beauty)</span><br><span class="line">            beauty_map[price] = <span class="built_in">max</span>(beauty_map.get(price, <span class="number">0</span>), cur_max)</span><br><span class="line"></span><br><span class="line">        key_list = <span class="built_in">list</span>(beauty_map.keys())</span><br><span class="line">        key_set = <span class="built_in">set</span>(key_list)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">find</span>(<span class="params">target</span>):</span><br><span class="line">            left = <span class="number">0</span></span><br><span class="line">            right = <span class="built_in">len</span>(key_list) - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> left &lt; right:</span><br><span class="line">                mid = (left + right + <span class="number">1</span>) // <span class="number">2</span></span><br><span class="line">                <span class="keyword">if</span> key_list[mid] &lt;= target:</span><br><span class="line">                    left = mid</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    right = mid - <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> left</span><br><span class="line"></span><br><span class="line">        ans = []</span><br><span class="line">        <span class="keyword">for</span> query <span class="keyword">in</span> queries:</span><br><span class="line">            <span class="keyword">if</span> query <span class="keyword">in</span> key_set:</span><br><span class="line">                ans.append(beauty_map[query])</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ret = find(query)</span><br><span class="line">                <span class="keyword">if</span> key_list[ret] &gt; query:</span><br><span class="line">                    ans.append(<span class="number">0</span>)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    ans.append(beauty_map[key_list[ret]])</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+<p>返回结果数组。如果存在多种答案，则返回其中任何一种。</p>
+<p>请注意，二维数组的每一行上可以存在不同数量的元素。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>维护hashmap，遍历添加当前arr，如果当前key为0，pop掉，直到hashmap为空。</p>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">findMatrix</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span><br><span class="line">        ret = []</span><br><span class="line">        c = Counter(nums)</span><br><span class="line">        <span class="keyword">while</span> c:</span><br><span class="line">            cur = []</span><br><span class="line">            remove_keys = []</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> c.keys():</span><br><span class="line">                cur.append(k)</span><br><span class="line">                c[k] -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> c[k] == <span class="number">0</span>:</span><br><span class="line">                    remove_keys.append(k)</span><br><span class="line">            ret.append(cur)</span><br><span class="line">            <span class="keyword">for</span> k <span class="keyword">in</span> remove_keys:</span><br><span class="line">                <span class="keyword">del</span> c[k]</span><br><span class="line">        <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure>
 
-<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>item的大小：N，query的长度：M</p>
-<p>时间复杂度：O(MlogN)</p>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><p>时间复杂度：O(N)，数组长度</p>
 <p>空间复杂度：O(N)</p>
 
     </div>
@@ -253,21 +254,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E4%BA%8C%E5%88%86/" rel="tag"># 二分</a>
+              <a href="/tags/hashmap/" rel="tag"># hashmap</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/03/08/%E8%8A%B1%E5%9B%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E6%80%BB%E7%BE%8E%E4%B8%BD%E5%80%BC/" rel="prev" title="【每日算法题】花园的最大总美丽值">
-                  <i class="fa fa-angle-left"></i> 【每日算法题】花园的最大总美丽值
+                <a href="/2025/03/17/%E4%BD%BF%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B9%B3%E8%A1%A1%E7%9A%84%E6%9C%80%E5%B0%8F%E4%BA%A4%E6%8D%A2%E6%AC%A1%E6%95%B0/" rel="prev" title="【每日算法题】使字符串平衡的最小交换次数">
+                  <i class="fa fa-angle-left"></i> 【每日算法题】使字符串平衡的最小交换次数
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/03/10/%E6%89%BE%E5%88%B0%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%97%E7%9A%84-K-%E7%BE%8E%E4%B8%BD%E5%80%BC/" rel="next" title="【每日算法题】找到一个数字的 K 美丽值">
-                  【每日算法题】找到一个数字的 K 美丽值 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
